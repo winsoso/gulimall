@@ -2,36 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9590ea4-0d83-4863-a0b2-5b7430e60cdf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulimall-admin/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gulimall-admin/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/gulimall-admin/target/" />
     <ignored path="$PROJECT_DIR$/gulimall-core/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/gulimall-pms/target/" />
+    <ignored path="$PROJECT_DIR$/gulimall-ums/target/" />
+    <ignored path="$PROJECT_DIR$/gulimall-oms/target/" />
+    <ignored path="$PROJECT_DIR$/gulimall-sms/target/" />
+    <ignored path="$PROJECT_DIR$/gulimall-wms/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +38,12 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/gulimall-admin/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/gulimall-pms/pom.xml" />
+        <option value="$PROJECT_DIR$/gulimall-ums/pom.xml" />
+        <option value="$PROJECT_DIR$/gulimall-wms/pom.xml" />
+        <option value="$PROJECT_DIR$/gulimall-sms/pom.xml" />
+        <option value="$PROJECT_DIR$/gulimall-oms/pom.xml" />
       </list>
     </option>
   </component>
@@ -81,15 +84,6 @@
       </expand>
       <select />
     </treeState>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/encodings.xml" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="475" />
@@ -140,10 +134,45 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.GmallAdminMainApplication">
     <configuration name="GmallAdminMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gulimall-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.GmallAdminMainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GulimallOmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gulimall-oms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gulimall.oms.GulimallOmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GulimallPmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gulimall-pms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gulimall.pms.GulimallPmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GulimallSmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gulimall-sms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gulimall.sms.GulimallSmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GulimallUmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gulimall-ums" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gulimall.ums.GulimallUmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GulimallWmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gulimall-wms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gulimall.wms.GulimallWmsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,24 +189,23 @@
       <option name="presentableId" value="Default" />
       <updated>1564661433801</updated>
       <workItem from="1564661444931" duration="1559000" />
-      <workItem from="1564664984617" duration="474000" />
+      <workItem from="1564664984617" duration="4060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2033000" />
+    <option name="totallyTimeSpent" value="5619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4903846" visible="true" weight="0.2557047" />
-      <window_info id="Web" order="6" sideWeight="0.50961536" side_tool="true" visible="true" weight="0.2557047" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.865285" visible="true" weight="0.2557047" />
+      <window_info id="Web" order="6" sideWeight="0.13471502" side_tool="true" visible="true" weight="0.2557047" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -187,16 +215,16 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6409396" visible="true" weight="0.38552436" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.6395973" visible="true" weight="0.42983752" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3590604" side_tool="true" visible="true" weight="0.38552436" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.36040267" side_tool="true" visible="true" weight="0.42983752" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.3295302" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.17651007" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -209,6 +237,24 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gulimall-admin/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.en.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -217,8 +263,55 @@
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/gulimall-pms/src/main/java/com/atguigu/gulimall/pms/GulimallPmsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulimall-wms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulimall-ums/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulimall-sms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulimall-oms/mvnw.cmd">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulimall-pms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulimall-oms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
   </component>
   <component name="masterDetails">
