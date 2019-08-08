@@ -1,12 +1,14 @@
 package com.atguigu.gulimall.pms.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 
 import com.atguigu.gulimall.commons.bean.PageVo;
 import com.atguigu.gulimall.commons.bean.QueryCondition;
 import com.atguigu.gulimall.commons.bean.Resp;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,18 @@ public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;
 
+
+    ///pms/skuinfo/list/spu/{spuId}
+    @ApiOperation("根据商品的id（spuId）查出所有的sku信息")
+    @GetMapping("/list/spu/{spuId}")
+    public Resp<List<SkuInfoEntity>> spuSkuInfo(@PathVariable("spuId")Long spuId){
+
+        List<SkuInfoEntity> skus = skuInfoService.list(new QueryWrapper<SkuInfoEntity>().eq("spu_id", spuId));
+
+        return Resp.ok(skus);
+    }
+
+
     /**
      * 列表
      */
@@ -53,7 +67,7 @@ public class SkuInfoController {
     @GetMapping("/info/{skuId}")
     @PreAuthorize("hasAuthority('pms:skuinfo:info')")
     public Resp<SkuInfoEntity> info(@PathVariable("skuId") Long skuId){
-		SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
+        SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
 
         return Resp.ok(skuInfo);
     }
@@ -65,7 +79,7 @@ public class SkuInfoController {
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:skuinfo:save')")
     public Resp<Object> save(@RequestBody SkuInfoEntity skuInfo){
-		skuInfoService.save(skuInfo);
+        skuInfoService.save(skuInfo);
 
         return Resp.ok(null);
     }
@@ -77,7 +91,7 @@ public class SkuInfoController {
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('pms:skuinfo:update')")
     public Resp<Object> update(@RequestBody SkuInfoEntity skuInfo){
-		skuInfoService.updateById(skuInfo);
+        skuInfoService.updateById(skuInfo);
 
         return Resp.ok(null);
     }
@@ -89,7 +103,7 @@ public class SkuInfoController {
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('pms:skuinfo:delete')")
     public Resp<Object> delete(@RequestBody Long[] skuIds){
-		skuInfoService.removeByIds(Arrays.asList(skuIds));
+        skuInfoService.removeByIds(Arrays.asList(skuIds));
 
         return Resp.ok(null);
     }

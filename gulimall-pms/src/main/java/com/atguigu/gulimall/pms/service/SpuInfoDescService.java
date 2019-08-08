@@ -16,5 +16,8 @@ import com.atguigu.gulimall.commons.bean.QueryCondition;
 public interface SpuInfoDescService extends IService<SpuInfoDescEntity> {
 
     PageVo queryPage(QueryCondition params);
+
+    void saveSpuInfoImages(Long spuId, String[] spuImages);
+
 }
 

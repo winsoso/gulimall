@@ -7,6 +7,7 @@ import java.util.Map;
 import com.atguigu.gulimall.commons.bean.PageVo;
 import com.atguigu.gulimall.commons.bean.QueryCondition;
 import com.atguigu.gulimall.commons.bean.Resp;
+import com.atguigu.gulimall.pms.vo.SpuAllSaveVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,15 @@ import com.atguigu.gulimall.pms.service.SpuInfoService;
 public class SpuInfoController {
     @Autowired
     private SpuInfoService spuInfoService;
+
+//分页参数QueryCondition queryCondition
+@GetMapping("/simple/search")
+public Resp<Object> querySpuInfoPage(QueryCondition queryCondition,
+                                     @RequestParam(value = "catId",defaultValue = "0") Long catId){
+    PageVo page = spuInfoService.queryPageByCatId(queryCondition,catId);
+
+    return Resp.ok(page);
+}
 
     /**
      * 列表
@@ -64,8 +74,11 @@ public class SpuInfoController {
     @ApiOperation("保存")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:spuinfo:save')")
-    public Resp<Object> save(@RequestBody SpuInfoEntity spuInfo){
-		spuInfoService.save(spuInfo);
+    public Resp<Object> save(@RequestBody SpuAllSaveVo spuInfo){
+        //spuInfoService.save(spuInfo);
+
+        //数据存储到数据库，数据落盘
+        spuInfoService.spuBigSaveAll(spuInfo);
 
         return Resp.ok(null);
     }
@@ -76,8 +89,8 @@ public class SpuInfoController {
     @ApiOperation("修改")
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('pms:spuinfo:update')")
-    public Resp<Object> update(@RequestBody SpuInfoEntity spuInfo){
-		spuInfoService.updateById(spuInfo);
+    public Resp<Object> update(@RequestBody SpuAllSaveVo spuInfo){
+		//spuInfoService.updateById(spuInfo);
 
         return Resp.ok(null);
     }
