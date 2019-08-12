@@ -22,14 +22,12 @@ import com.atguigu.gulimall.pms.entity.AttrEntity;
 import com.atguigu.gulimall.pms.service.AttrService;
 
 
-
-
 /**
  * 商品属性
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @Api(tags = "商品属性 管理")
 @RestController
@@ -40,7 +38,8 @@ public class AttrController {
 
     @Autowired
     private AttrGroupService attrGroupService;
-    //pms/attr/sale/{catId}
+
+    ///pms/attr/sale/{catId}
     @ApiOperation("查询某个分类下对应的所有销售属性")
     @GetMapping("/sale/{catId}")
     public Resp<PageVo> getCatelogSaleAttrs(
@@ -53,17 +52,19 @@ public class AttrController {
         return Resp.ok(pageVo);
     }
 
+    ///pms/attr/base/{catId}
+    @ApiOperation("查询某个分类下对应的所有基本属性")
+    @GetMapping("/base/{catId}")
+    public Resp<PageVo> getCatelogBaseAttrs(
+            @PathVariable("catId") Long catId,
+            QueryCondition queryCondition) {
 
-///pms/attr/base/{catId}
-@ApiOperation("查询某个分类下对应的所有基本属性")
-@GetMapping("/base/{catId}")
-public Resp<PageVo> getCatelogBaseAttrs(
-        @PathVariable("catId") Long catId,
-        QueryCondition queryCondition) {
-    PageVo pageVo = attrService.queryPageCatelogBaseAttrs(queryCondition, catId,1);
 
-    return Resp.ok(pageVo);
-}
+        PageVo pageVo = attrService.queryPageCatelogBaseAttrs(queryCondition, catId,1);
+
+        return Resp.ok(pageVo);
+    }
+
 
     /**
      * 列表
@@ -84,19 +85,18 @@ public Resp<PageVo> getCatelogBaseAttrs(
     @ApiOperation("详情查询")
     @GetMapping("/info/{attrId}")
     @PreAuthorize("hasAuthority('pms:attr:info')")
-    public Resp<AttrWithGroupVo> info(@PathVariable("attrId") Long attrId){
-
+    public Resp<AttrWithGroupVo> info(@PathVariable("attrId") Long attrId) {
         AttrWithGroupVo attrWithGroupVo = new AttrWithGroupVo();
-        //1.先查出属性
-
+        //1、查出属性信息
         AttrEntity attr = attrService.getById(attrId);
         BeanUtils.copyProperties(attr,attrWithGroupVo);
 
-		//2.查出这个属性所在的分组
+
+        //2、查出这个属性所在的分组信息
         AttrGroupEntity attrGroup = attrGroupService.getGroupInfoByAttrId(attrId);
         attrWithGroupVo.setGroup(attrGroup);
-        return Resp.ok(attrWithGroupVo);
 
+        return Resp.ok(attrWithGroupVo);
     }
 
     /**
@@ -105,8 +105,8 @@ public Resp<PageVo> getCatelogBaseAttrs(
     @ApiOperation("保存")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:attr:save')")
-    public Resp<Object> save(@RequestBody AttrSaveVo attr){
-		attrService.saveAttrAndRelation(attr);
+    public Resp<Object> save(@RequestBody AttrSaveVo attr) {
+        attrService.saveAttrAndRelation(attr);
 
         return Resp.ok(null);
     }
@@ -117,8 +117,8 @@ public Resp<PageVo> getCatelogBaseAttrs(
     @ApiOperation("修改")
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('pms:attr:update')")
-    public Resp<Object> update(@RequestBody AttrEntity attr){
-		attrService.updateById(attr);
+    public Resp<Object> update(@RequestBody AttrEntity attr) {
+        attrService.updateById(attr);
 
         return Resp.ok(null);
     }
@@ -129,8 +129,8 @@ public Resp<PageVo> getCatelogBaseAttrs(
     @ApiOperation("删除")
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('pms:attr:delete')")
-    public Resp<Object> delete(@RequestBody Long[] attrIds){
-		attrService.removeByIds(Arrays.asList(attrIds));
+    public Resp<Object> delete(@RequestBody Long[] attrIds) {
+        attrService.removeByIds(Arrays.asList(attrIds));
 
         return Resp.ok(null);
     }

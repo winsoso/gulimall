@@ -22,9 +22,9 @@ import com.atguigu.gulimall.pms.service.BrandService;
 /**
  * 品牌
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @Api(tags = "品牌 管理")
 @RestController
@@ -63,7 +63,7 @@ public class BrandController {
      */
     @ApiOperation("保存")
     @PostMapping("/save")
-    @PreAuthorize("hasAuthority('pms:brand:save')")
+    //@PreAuthorize("hasAuthority('pms:brand:save')")
     public Resp<Object> save(@RequestBody BrandEntity brand){
 		brandService.save(brand);
 

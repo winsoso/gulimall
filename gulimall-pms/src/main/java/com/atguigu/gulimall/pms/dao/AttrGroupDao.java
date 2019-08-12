@@ -7,9 +7,9 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 属性分组
  * 
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @Mapper
 public interface AttrGroupDao extends BaseMapper<AttrGroupEntity> {

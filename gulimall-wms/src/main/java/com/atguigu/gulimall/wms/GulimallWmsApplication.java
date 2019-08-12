@@ -6,10 +6,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
- * 1.注册配置中心
- *      a.导包 b.写配置 c.加注释 @EnableDiscoveryClient
- * 2. 配置中心
- * a.@RefreshScope 刷新
+ * 1、注册中心
+ *      1）、导包
+ *      2）、写配置
+ *      3）、加注释开功能
+ *      @EnableDiscoveryClient
+ *
+ * 2、配置中心
+ *     @RefreshScope
+ *
  */
 @MapperScan("com.atguigu.gulimall.wms.dao")
 @RefreshScope

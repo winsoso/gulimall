@@ -39,9 +39,11 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
     }
 
     @Override
-    public PageVo queryPageCatelogBaseAttrs(QueryCondition queryCondition, Long catId, Integer attrType) {
-        //1.获取分页条件
+    public PageVo queryPageCatelogBaseAttrs(QueryCondition queryCondition, Long catId,Integer attrType) {
+
+        //1、获取分页条件
         IPage<AttrEntity> page = new Query<AttrEntity>().getPage(queryCondition);
+
         //2、构造查询条件
         QueryWrapper<AttrEntity> wrapper = new QueryWrapper<AttrEntity>()
                 .eq("catelog_id", catId)
@@ -51,12 +53,14 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         return new PageVo(data);
 
     }
-    @Transactional//事务注解
+
+    //<tx:annotation-driven/>
+    @Transactional
     @Override
     public void saveAttrAndRelation(AttrSaveVo attr) {
-        //1.先把把属性保存在属性表中
+        //1、先把属性保存在属性表中，
         AttrEntity attrEntity = new AttrEntity();
-        //对拷属性
+        //对拷属性值
         BeanUtils.copyProperties(attr,attrEntity);
         attrDao.insert(attrEntity);
 
@@ -67,8 +71,7 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         relationEntity.setAttrId(attrId);
         relationEntity.setAttrGroupId(attrGroupId);
         relationDao.insert(relationEntity);
-        //int i = 10/0;事务测试
-
+        //int i = 10/0;
     }
 
 }

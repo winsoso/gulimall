@@ -1,6 +1,7 @@
 package com.atguigu.gulimall.pms.service.impl;
 
 import com.atguigu.gulimall.commons.utils.AppUtils;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Map;
@@ -20,8 +21,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service("spuInfoDescService")
 public class SpuInfoDescServiceImpl extends ServiceImpl<SpuInfoDescDao, SpuInfoDescEntity> implements SpuInfoDescService {
+
     @Autowired
     SpuInfoDescDao spuInfoDescDao;
+
     @Override
     public PageVo queryPage(QueryCondition params) {
         IPage<SpuInfoDescEntity> page = this.page(
@@ -29,6 +32,7 @@ public class SpuInfoDescServiceImpl extends ServiceImpl<SpuInfoDescDao, SpuInfoD
                 new QueryWrapper<SpuInfoDescEntity>()
         );
 
+       // AopContext.currentProxy();
         return new PageVo(page);
     }
 

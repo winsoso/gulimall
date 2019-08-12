@@ -10,7 +10,7 @@ import lombok.Data;
 
 /**
  * sku销售属性&值
- *
+ * 
  * @author leifengyang
  * @email lfy@atguigu.com
  * @date 2019-08-01 15:52:32
@@ -19,38 +19,38 @@ import lombok.Data;
 @Data
 @TableName("pms_sku_sale_attr_value")
 public class SkuSaleAttrValueEntity implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * id
-     */
-    @TableId
-    @ApiModelProperty(name = "id",value = "id")
-    private Long id;
-    /**
-     * sku_id
-     */
-    @ApiModelProperty(name = "skuId",value = "sku_id")
-    private Long skuId;
-    /**
-     * attr_id
-     */
-    @ApiModelProperty(name = "attrId",value = "attr_id")
-    private Long attrId;
-    /**
-     * 销售属性名
-     */
-    @ApiModelProperty(name = "attrName",value = "销售属性名")
-    private String attrName;
-    /**
-     * 销售属性值
-     */
-    @ApiModelProperty(name = "attrValue",value = "销售属性值")
-    private String attrValue;
-    /**
-     * 顺序
-     */
-    @ApiModelProperty(name = "attrSort",value = "顺序")
-    private Integer attrSort;
+	/**
+	 * id
+	 */
+	@TableId
+	@ApiModelProperty(name = "id",value = "id")
+	private Long id;
+	/**
+	 * sku_id
+	 */
+	@ApiModelProperty(name = "skuId",value = "sku_id")
+	private Long skuId;
+	/**
+	 * attr_id
+	 */
+	@ApiModelProperty(name = "attrId",value = "attr_id")
+	private Long attrId;
+	/**
+	 * 销售属性名
+	 */
+	@ApiModelProperty(name = "attrName",value = "销售属性名")
+	private String attrName;
+	/**
+	 * 销售属性值
+	 */
+	@ApiModelProperty(name = "attrValue",value = "销售属性值")
+	private String attrValue;
+	/**
+	 * 顺序
+	 */
+	@ApiModelProperty(name = "attrSort",value = "顺序")
+	private Integer attrSort;
 
 }

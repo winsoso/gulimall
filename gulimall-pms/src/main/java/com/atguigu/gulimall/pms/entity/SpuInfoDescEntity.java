@@ -11,9 +11,9 @@ import lombok.Data;
 /**
  * spu信息介绍
  * 
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @ApiModel
 @Data

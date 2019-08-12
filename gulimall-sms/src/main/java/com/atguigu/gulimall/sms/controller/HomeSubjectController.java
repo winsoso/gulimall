@@ -22,9 +22,9 @@ import com.atguigu.gulimall.sms.service.HomeSubjectService;
 /**
  * 首页专题表【jd首页下面很多专题，每个专题链接新的页面，展示专题商品信息】
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:48:16
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:36:16
  */
 @Api(tags = "首页专题表【jd首页下面很多专题，每个专题链接新的页面，展示专题商品信息】 管理")
 @RestController

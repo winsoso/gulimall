@@ -9,9 +9,9 @@ import com.atguigu.gulimall.commons.bean.QueryCondition;
 /**
  * 积分变化历史记录
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:49:49
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:38:09
  */
 public interface IntegrationChangeHistoryService extends IService<IntegrationChangeHistoryEntity> {
 

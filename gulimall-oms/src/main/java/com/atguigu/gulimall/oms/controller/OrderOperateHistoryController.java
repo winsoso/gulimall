@@ -22,9 +22,9 @@ import com.atguigu.gulimall.oms.service.OrderOperateHistoryService;
 /**
  * 订单操作历史记录
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:46:33
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:33:14
  */
 @Api(tags = "订单操作历史记录 管理")
 @RestController

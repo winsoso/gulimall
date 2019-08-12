@@ -1,5 +1,6 @@
 package com.atguigu.gulimall.pms.controller;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -23,9 +24,9 @@ import com.atguigu.gulimall.pms.service.SpuInfoService;
 /**
  * spu信息
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @Api(tags = "spu信息 管理")
 @RestController
@@ -34,14 +35,14 @@ public class SpuInfoController {
     @Autowired
     private SpuInfoService spuInfoService;
 
-//分页参数QueryCondition queryCondition
-@GetMapping("/simple/search")
-public Resp<Object> querySpuInfoPage(QueryCondition queryCondition,
-                                     @RequestParam(value = "catId",defaultValue = "0") Long catId){
-    PageVo page = spuInfoService.queryPageByCatId(queryCondition,catId);
 
-    return Resp.ok(page);
-}
+    @GetMapping("/simple/search")
+    public Resp<Object> querySpuInfoPage(QueryCondition queryCondition,
+                                         @RequestParam(value = "catId",defaultValue = "0") Long catId){
+        PageVo page = spuInfoService.queryPageByCatId(queryCondition,catId);
+
+        return Resp.ok(page);
+    }
 
     /**
      * 列表
@@ -74,8 +75,8 @@ public Resp<Object> querySpuInfoPage(QueryCondition queryCondition,
     @ApiOperation("保存")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:spuinfo:save')")
-    public Resp<Object> save(@RequestBody SpuAllSaveVo spuInfo){
-        //spuInfoService.save(spuInfo);
+    public Resp<Object> save(@RequestBody SpuAllSaveVo spuInfo) throws Exception {
+		//spuInfoService.save(spuInfo);
 
         //数据存储到数据库，数据落盘
         spuInfoService.spuBigSaveAll(spuInfo);
@@ -86,14 +87,14 @@ public Resp<Object> querySpuInfoPage(QueryCondition queryCondition,
     /**
      * 修改
      */
-    @ApiOperation("修改")
-    @PostMapping("/update")
-    @PreAuthorize("hasAuthority('pms:spuinfo:update')")
-    public Resp<Object> update(@RequestBody SpuAllSaveVo spuInfo){
-		//spuInfoService.updateById(spuInfo);
-
-        return Resp.ok(null);
-    }
+//    @ApiOperation("修改")
+//    @PostMapping("/update")
+//    @PreAuthorize("hasAuthority('pms:spuinfo:update')")
+//    public Resp<Object> update(@RequestBody SpuAllSaveVo spuInfo){
+//		//spuInfoService.updateById(spuInfo);
+//
+//        return Resp.ok(null);
+//    }
 
     /**
      * 删除

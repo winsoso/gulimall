@@ -5,12 +5,6 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * @author winsoso
- * @title: SkuVo
- * @projectName gulimall
- * @date 2019/8/63:04
- */
 @Data
 public class SkuVo {
 

@@ -7,12 +7,6 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author winsoso
- * @title: HelloController
- * @projectName gulimall
- * @date 2019/8/221:13
- */
 @RefreshScope   //可以从配置中心动态的获取配置
 @RestController
 public class HelloController {
@@ -22,10 +16,12 @@ public class HelloController {
 
     @Value("${my.content}") //从配置文件中获取名为my.content的值
     private String content = "";
-    @Value("${url}")
+
+    @Value("${url:默认}")
     private String redisUrl;
-    @Value("${datasource}")
+    @Value("${datasource:默认}")
     private String dbUrl;
+
     /**
      * feign声明式调用
      * @return
@@ -33,7 +29,7 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello(){
         String msg = "";
-        msg = worldService.World();
-        return "hello "+ msg + "" +content+"==>redis:"+redisUrl+"==>db"+dbUrl;
+        msg = worldService.world();
+        return "hello "+ msg + "" +content+"==>redis:"+redisUrl+"==>db："+dbUrl;
     }
 }

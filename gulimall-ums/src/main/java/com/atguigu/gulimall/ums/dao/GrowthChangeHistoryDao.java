@@ -7,9 +7,9 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 成长值变化历史记录
  * 
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:49:49
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:38:09
  */
 @Mapper
 public interface GrowthChangeHistoryDao extends BaseMapper<GrowthChangeHistoryEntity> {

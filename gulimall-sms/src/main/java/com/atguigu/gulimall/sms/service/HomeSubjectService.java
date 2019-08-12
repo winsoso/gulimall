@@ -9,9 +9,9 @@ import com.atguigu.gulimall.commons.bean.QueryCondition;
 /**
  * 首页专题表【jd首页下面很多专题，每个专题链接新的页面，展示专题商品信息】
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:48:16
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:36:16
  */
 public interface HomeSubjectService extends IService<HomeSubjectEntity> {
 

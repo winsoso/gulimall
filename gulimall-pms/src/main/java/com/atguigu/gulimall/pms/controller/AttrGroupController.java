@@ -29,11 +29,13 @@ import com.atguigu.gulimall.pms.service.AttrGroupService;
 
 
 /**
- * 属性分组
+ * 属性分组;
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ *
+ *
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @Api(tags = "属性分组 管理")
 @RestController
@@ -106,7 +108,7 @@ public class AttrGroupController {
     @GetMapping("/info/{attrGroupId}")
     @PreAuthorize("hasAuthority('pms:attrgroup:info')")
     public Resp<AttrGroupEntity> info(@PathVariable("attrGroupId") Long attrGroupId){
-        AttrGroupEntity attrGroup = attrGroupService.getById(attrGroupId);
+		AttrGroupEntity attrGroup = attrGroupService.getById(attrGroupId);
 
         return Resp.ok(attrGroup);
     }
@@ -118,7 +120,7 @@ public class AttrGroupController {
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:attrgroup:save')")
     public Resp<Object> save(@RequestBody AttrGroupEntity attrGroup){
-        attrGroupService.save(attrGroup);
+		attrGroupService.save(attrGroup);
 
         return Resp.ok(null);
     }
@@ -130,7 +132,7 @@ public class AttrGroupController {
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('pms:attrgroup:update')")
     public Resp<Object> update(@RequestBody AttrGroupEntity attrGroup){
-        attrGroupService.updateById(attrGroup);
+		attrGroupService.updateById(attrGroup);
 
         return Resp.ok(null);
     }
@@ -142,7 +144,7 @@ public class AttrGroupController {
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('pms:attrgroup:delete')")
     public Resp<Object> delete(@RequestBody Long[] attrGroupIds){
-        attrGroupService.removeByIds(Arrays.asList(attrGroupIds));
+		attrGroupService.removeByIds(Arrays.asList(attrGroupIds));
 
         return Resp.ok(null);
     }

@@ -6,16 +6,13 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
-/**
- * @author winsoso
- * @title: GulimallGateWayConfig
- * @projectName gulimall
- * @date 2019/8/49:29
- */
+
 @Configuration
 public class GulimallGateWayConfig {
 
     /**
+     * Gateway；
+     *  Reactive；  Webflux；
      *
      * @return
      */

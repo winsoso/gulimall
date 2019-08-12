@@ -22,9 +22,9 @@ import com.atguigu.gulimall.sms.service.CouponSpuRelationService;
 /**
  * 优惠券与产品关联
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:48:16
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:36:16
  */
 @Api(tags = "优惠券与产品关联 管理")
 @RestController

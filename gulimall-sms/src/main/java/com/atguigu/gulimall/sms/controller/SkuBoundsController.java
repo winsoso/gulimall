@@ -2,6 +2,7 @@ package com.atguigu.gulimall.sms.controller;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 
 import com.atguigu.gulimall.commons.bean.PageVo;
@@ -24,9 +25,9 @@ import com.atguigu.gulimall.sms.service.SkuBoundsService;
 /**
  * 商品sku积分设置
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:48:15
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:36:16
  */
 @Slf4j
 @Api(tags = "商品sku积分设置 管理")
@@ -35,7 +36,6 @@ import com.atguigu.gulimall.sms.service.SkuBoundsService;
 public class SkuBoundsController {
     @Autowired
     private SkuBoundsService skuBoundsService;
-
 
 
     /**
@@ -52,7 +52,6 @@ public class SkuBoundsController {
         skuBoundsService.saveSkuAllSaleInfo(to);
         return Resp.ok(null);
     }
-
 
 
     /**
@@ -75,7 +74,7 @@ public class SkuBoundsController {
     @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('sms:skubounds:info')")
     public Resp<SkuBoundsEntity> info(@PathVariable("id") Long id){
-        SkuBoundsEntity skuBounds = skuBoundsService.getById(id);
+		SkuBoundsEntity skuBounds = skuBoundsService.getById(id);
 
         return Resp.ok(skuBounds);
     }
@@ -87,7 +86,7 @@ public class SkuBoundsController {
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('sms:skubounds:save')")
     public Resp<Object> save(@RequestBody SkuBoundsEntity skuBounds){
-        skuBoundsService.save(skuBounds);
+		skuBoundsService.save(skuBounds);
 
         return Resp.ok(null);
     }
@@ -99,7 +98,7 @@ public class SkuBoundsController {
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('sms:skubounds:update')")
     public Resp<Object> update(@RequestBody SkuBoundsEntity skuBounds){
-        skuBoundsService.updateById(skuBounds);
+		skuBoundsService.updateById(skuBounds);
 
         return Resp.ok(null);
     }
@@ -111,7 +110,7 @@ public class SkuBoundsController {
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('sms:skubounds:delete')")
     public Resp<Object> delete(@RequestBody Long[] ids){
-        skuBoundsService.removeByIds(Arrays.asList(ids));
+		skuBoundsService.removeByIds(Arrays.asList(ids));
 
         return Resp.ok(null);
     }

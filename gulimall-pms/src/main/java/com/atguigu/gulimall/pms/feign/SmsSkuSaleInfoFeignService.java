@@ -8,12 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-/**
- * @author winsoso
- * @title: SmsSkuSaleInfoFeignService
- * @projectName gulimall
- * @date 2019/8/72:05
- */
+
 @FeignClient("gulimall-sms")
 public interface SmsSkuSaleInfoFeignService {
 

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -21,6 +22,7 @@ import com.atguigu.gulimall.commons.bean.QueryCondition;
 import com.atguigu.gulimall.sms.dao.SkuBoundsDao;
 import com.atguigu.gulimall.sms.entity.SkuBoundsEntity;
 import com.atguigu.gulimall.sms.service.SkuBoundsService;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service("skuBoundsService")
@@ -45,6 +47,19 @@ public class SkuBoundsServiceImpl extends ServiceImpl<SkuBoundsDao, SkuBoundsEnt
         return new PageVo(page);
     }
 
+    /**
+     * Propagation：事务的传播行为
+     *      REQUIRED：
+     *      SUPPORTS：
+     *      MANDATORY：
+     *      REQUIRES_NEW：
+     *      NOT_SUPPORTED：
+     *      NEVER：
+     *      NESTED：
+     * Isolation：事务的隔离级别 isolation() default Isolation.DEFAULT;
+     * @param to
+     */
+    @Transactional
     @Override
     public void saveSkuAllSaleInfo(List<SkuSaleInfoTo> to) {
         if (to != null && to.size() > 0) {

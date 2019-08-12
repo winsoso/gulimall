@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gulimall-core" />
+        <module name="gulimall-pms" />
         <module name="guli-generator" />
         <module name="gulimall-admin" />
         <module name="gulimall-wms" />
@@ -14,12 +14,27 @@
         <module name="gulimall-sms" />
         <module name="gulimall-gateway" />
         <module name="gulimall-oms" />
-        <module name="gulimall-pms" />
+        <module name="es-demo" />
+        <module name="gulimall-core" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="es-demo" target="1.8" />
+      <module name="guli-generator" target="1.8" />
+      <module name="gulimall" target="1.8" />
+      <module name="gulimall-admin" target="1.8" />
+      <module name="gulimall-core" target="1.8" />
+      <module name="gulimall-gateway" target="1.8" />
+      <module name="gulimall-oms" target="1.8" />
+      <module name="gulimall-pms" target="1.8" />
+      <module name="gulimall-sms" target="1.8" />
+      <module name="gulimall-ums" target="1.8" />
+      <module name="gulimall-wms" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="es-demo" options="-parameters" />
       <module name="guli-generator" options="-parameters" />
       <module name="gulimall-admin" options="-parameters" />
       <module name="gulimall-gateway" options="-parameters" />

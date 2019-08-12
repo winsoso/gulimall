@@ -22,6 +22,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
     @Autowired
     CategoryDao categoryDao;
+
     @Override
     public PageVo queryPage(QueryCondition params) {
         IPage<CategoryEntity> page = this.page(
@@ -34,21 +35,27 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
     @Override
     public List<CategoryEntity> getCategoryByLevel(Integer level) {
+
         QueryWrapper<CategoryEntity> wrapper = new QueryWrapper<>();
-        //封装 wapper的条件
-        if(level !=0){
+        if(level != 0){
             wrapper.eq("cat_level",level);
         }
+
+
+
         List<CategoryEntity> entities = categoryDao.selectList(wrapper);
+
         return entities;
     }
 
     @Override
     public List<CategoryEntity> getCategoryChildrensById(Integer catId) {
+
         QueryWrapper<CategoryEntity> wrapper = new QueryWrapper<>();
         wrapper.eq("parent_cid",catId);
 
         List<CategoryEntity> list = categoryDao.selectList(wrapper);
+
         return list;
     }
 

@@ -23,9 +23,9 @@ import com.atguigu.gulimall.pms.service.CategoryService;
 /**
  * 商品三级分类
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @Api(tags = "商品三级分类 管理")
 @RestController
@@ -42,6 +42,8 @@ public class CategoryController {
         return  Resp.ok(data);
     }
 
+
+
     @ApiOperation("获取某个等级下的所有分类数据")
     @GetMapping("/list/tree")
     public Resp<Object> listTree(@RequestParam(value = "level") Integer level){
@@ -49,6 +51,7 @@ public class CategoryController {
         List<CategoryEntity> data = categoryService.getCategoryByLevel(level);
         return  Resp.ok(data);
     }
+
 
     /**
      * 列表

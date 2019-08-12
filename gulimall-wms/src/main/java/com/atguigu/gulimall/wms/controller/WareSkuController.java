@@ -24,9 +24,9 @@ import com.atguigu.gulimall.wms.service.WareSkuService;
 /**
  * 商品库存
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:50:49
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:39:51
  */
 @Api(tags = "商品库存 管理")
 @RestController
@@ -34,7 +34,8 @@ import com.atguigu.gulimall.wms.service.WareSkuService;
 public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
-    ///wms/waresku/sku/1获取某个sku的库存信息
+
+    ///wms/waresku/sku/1
     @GetMapping("/sku/{skuId}")
     public Resp<List<WareSkuEntity>> skuWareInfos(@PathVariable("skuId")Long skuId){
 
@@ -42,6 +43,7 @@ public class WareSkuController {
 
         return Resp.ok(list);
     }
+
     /**
      * 列表
      */

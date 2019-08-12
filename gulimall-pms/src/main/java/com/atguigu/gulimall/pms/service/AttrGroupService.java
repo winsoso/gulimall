@@ -9,9 +9,9 @@ import com.atguigu.gulimall.commons.bean.QueryCondition;
 /**
  * 属性分组
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 public interface AttrGroupService extends IService<AttrGroupEntity> {
 
@@ -19,12 +19,12 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
 
     PageVo queryPageAttrGroupsByCatId(QueryCondition queryCondition, Long catId);
 
+
     /**
-     * 根据属性的id 找到 它的分组信息
+     * 根据 属性的id 找到他的分组信息
      * @param attrId
      * @return
      */
     AttrGroupEntity getGroupInfoByAttrId(Long attrId);
-
 }
 

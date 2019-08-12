@@ -24,9 +24,9 @@ import com.atguigu.gulimall.pms.service.SkuInfoService;
 /**
  * sku信息
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 @Api(tags = "sku信息 管理")
 @RestController
@@ -67,7 +67,7 @@ public class SkuInfoController {
     @GetMapping("/info/{skuId}")
     @PreAuthorize("hasAuthority('pms:skuinfo:info')")
     public Resp<SkuInfoEntity> info(@PathVariable("skuId") Long skuId){
-        SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
+		SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
 
         return Resp.ok(skuInfo);
     }
@@ -79,7 +79,7 @@ public class SkuInfoController {
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:skuinfo:save')")
     public Resp<Object> save(@RequestBody SkuInfoEntity skuInfo){
-        skuInfoService.save(skuInfo);
+		skuInfoService.save(skuInfo);
 
         return Resp.ok(null);
     }
@@ -91,7 +91,7 @@ public class SkuInfoController {
     @PostMapping("/update")
     @PreAuthorize("hasAuthority('pms:skuinfo:update')")
     public Resp<Object> update(@RequestBody SkuInfoEntity skuInfo){
-        skuInfoService.updateById(skuInfo);
+		skuInfoService.updateById(skuInfo);
 
         return Resp.ok(null);
     }
@@ -103,7 +103,7 @@ public class SkuInfoController {
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('pms:skuinfo:delete')")
     public Resp<Object> delete(@RequestBody Long[] skuIds){
-        skuInfoService.removeByIds(Arrays.asList(skuIds));
+		skuInfoService.removeByIds(Arrays.asList(skuIds));
 
         return Resp.ok(null);
     }

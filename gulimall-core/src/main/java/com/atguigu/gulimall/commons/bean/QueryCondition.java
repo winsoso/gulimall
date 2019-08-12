@@ -26,6 +26,5 @@ public class QueryCondition {
     private String asc = "asc";
 
     @ApiModelProperty(name = "key",value = "检索条件",required = false)
-
     private String key = "";
 }

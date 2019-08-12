@@ -2,14 +2,9 @@ package com.atguigu.gulimall.pms.vo;
 
 import lombok.Data;
 
-/**
- * @author winsoso
- * @title: AttrRelationDeleteVo
- * @projectName gulimall
- * @date 2019/8/51:40
- */
 @Data
-public class AttrRelationDeleteVo {
+public class AttrRelationDeleteVo  {
+    //{attrId: 41, attrGroupId: 1}
     private Long attrId;
     private Long attrGroupId;
 }

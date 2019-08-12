@@ -4,12 +4,6 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
-/**
- * @author winsoso
- * @title: SkuSaleInfoTo
- * @projectName gulimall
- * @date 2019/8/71:46
- */
 @Data
 public class SkuSaleInfoTo {
 

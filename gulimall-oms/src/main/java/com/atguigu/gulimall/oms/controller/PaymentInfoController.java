@@ -22,9 +22,9 @@ import com.atguigu.gulimall.oms.service.PaymentInfoService;
 /**
  * 支付信息表
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 18:46:33
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 20:33:14
  */
 @Api(tags = "支付信息表 管理")
 @RestController

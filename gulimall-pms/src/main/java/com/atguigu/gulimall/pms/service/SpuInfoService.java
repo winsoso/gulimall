@@ -8,15 +8,16 @@ import com.atguigu.gulimall.pms.entity.SpuInfoEntity;
 import com.atguigu.gulimall.commons.bean.PageVo;
 import com.atguigu.gulimall.commons.bean.QueryCondition;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 
 /**
  * spu信息
  *
- * @author winsoso
- * @email 358281809@qq.com
- * @date 2019-08-02 11:29:38
+ * @author leifengyang
+ * @email lfy@atguigu.com
+ * @date 2019-08-01 15:52:32
  */
 public interface SpuInfoService extends IService<SpuInfoEntity> {
 
@@ -24,7 +25,7 @@ public interface SpuInfoService extends IService<SpuInfoEntity> {
 
     PageVo queryPageByCatId(QueryCondition queryCondition, Long catId);
 
-    void spuBigSaveAll(SpuAllSaveVo spuInfo);
+    void spuBigSaveAll(SpuAllSaveVo spuInfo) throws FileNotFoundException, InterruptedException;
 
     Long saveSpuBaseInfo(SpuAllSaveVo spuInfo);
 
